@@ -9,8 +9,7 @@ unsigned rightrot(unsigned x, int n)
     // a >>= b means a = a >> b, which will be covered in section 2.10
     x >>= n;
     // shift the rightmost n bits of x to the left by the number of bits in an integer minus n positions
-    // sizeof(int) returns the number of bytes in an integer
-    // sizeof(int) * 8 returns the number of bits in an integer
+    // sizeof(int) returns the number of bytes in an integer, which will be covered in section 6.3
     rightmost_n_bits_of_x <<= (sizeof(int) * 8 - n);
     // combine x and the rightmost n bits of x
     return x | rightmost_n_bits_of_x;
